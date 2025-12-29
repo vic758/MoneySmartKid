@@ -1,0 +1,23 @@
+function checkAnswer(button, correct) {
+  const feedback = document.getElementById('quiz-feedback');
+  
+  let userAnswer;
+  if (typeof correct === 'number') {
+    userAnswer = parseInt(button.innerText.replace('$',''));
+    if (userAnswer === correct) {
+      feedback.innerText = '✅ Correct!';
+      feedback.style.color = 'green';
+    } else {
+      feedback.innerText = '❌ Try again!';
+      feedback.style.color = 'red';
+    }
+  } else {
+    if (button.innerText.toLowerCase().includes(correct)) {
+      feedback.innerText = '✅ Correct!';
+      feedback.style.color = 'green';
+    } else {
+      feedback.innerText = '❌ Try again!';
+      feedback.style.color = 'red';
+    }
+  }
+}

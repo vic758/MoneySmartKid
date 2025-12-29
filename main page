@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Smart Kids 💸</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Money Smart Kids 💰</h1>
+    <p>Learn how to save, spend wisely, and grow your money!</p>
+  </header>
+
+  <nav>
+    <a href="#saving">Saving</a>
+    <a href="#budgeting">Budgeting</a>
+    <a href="#investing">Investing</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+
+  <main>
+    <section id="saving">
+      <h2>Saving Money</h2>
+      <p>Saving is keeping some of your money for later instead of spending it all today. 💵</p>
+      <p>Example: If you get $10 allowance and save $2, you still have $8 to spend!</p>
+    </section>
+
+    <section id="budgeting">
+      <h2>Budgeting</h2>
+      <p>Budgeting helps you plan your money so you don’t spend it all at once. 📊</p>
+      <p>Example: $5 for snacks, $3 for toys, $2 for savings.</p>
+    </section>
+
+    <section id="investing">
+      <h2>Investing</h2>
+      <p>Investing is using your money to try to make more money over time. 📈</p>
+      <p>Example: Buying lemonade supplies to sell lemonade can earn more than just saving the money.</p>
+    </section>
+
+    <section id="quiz">
+      <h2>Money Quiz 📝</h2>
+      <p>Choose the best answer!</p>
+      <div class="quiz-question">
+        <p>1️⃣ You get $10 allowance. You save $4. How much can you spend?</p>
+        <button onclick="checkAnswer(this, 6)">$6</button>
+        <button onclick="checkAnswer(this, 5)">$5</button>
+        <button onclick="checkAnswer(this, 4)">$4</button>
+      </div>
+
+      <div class="quiz-question">
+        <p>2️⃣ What is the best way to make your money grow?</p>
+        <button onclick="checkAnswer(this, 'invest')">Invest it</button>
+        <button onclick="checkAnswer(this, 'spend')">Spend it all</button>
+        <button onclick="checkAnswer(this, 'hide')">Hide it under the bed</button>
+      </div>
+
+      <p id="quiz-feedback"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by a student to help kids learn about money 💡</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

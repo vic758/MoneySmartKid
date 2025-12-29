@@ -1,0 +1,66 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fef9f7;
+  color: #333;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: #ff9800;
+  color: white;
+  padding: 40px 20px;
+}
+
+/* Navigation */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  border-bottom: 2px solid #eee;
+}
+
+section h2 {
+  color: #ff9800;
+}
+
+/* Quiz buttons */
+.quiz-question button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.quiz-question button:hover {
+  background-color: #45a049;
+}
+
+/* Footer */
+footer {
+  background-color: #ddd;
+  padding: 20px;
+  font-size: 14px;
+}
