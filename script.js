@@ -1,3 +1,4 @@
+// Quiz function
 function checkAnswer(button, correct) {
   const feedback = document.getElementById('quiz-feedback');
 
@@ -21,60 +22,24 @@ function checkAnswer(button, correct) {
     }
   }
 }
+
+// Mini AI Chatbot
 function askAI() {
   const input = document.getElementById('user-input');
   const chatBox = document.getElementById('chat-box');
   const userText = input.value.trim();
-  
-  if (userText === "") return;
+  if (!userText) return;
 
   // Show user message
   const userMessage = document.createElement('p');
   userMessage.innerHTML = "<b>You:</b> " + userText;
   chatBox.appendChild(userMessage);
-
-  // Clear input
   input.value = "";
 
-  // Simple AI responses (you can expand these)
+  const text = userText.toLowerCase();
   let aiResponse = "Hmm, I don't know that yet! Try asking about saving, budgeting, or investing.";
 
-  const text = userText.toLowerCase();
-  if (text.includes("save")) aiResponse = "Saving money is great! Try to save at least 10% of your allowance.";
-  else if (text.includes("budget")) aiResponse = "Budgeting helps you plan. Divide money into spending, saving, and fun.";
-  else if (text.includes("invest")) aiResponse = "Investing can help your money grow over time, even with small amounts!";
-  else if (text.includes("quiz")) aiResponse = "Check the quiz section to practice what you've learned!";
-
-  // Show AI response
-  const aiMessage = document.createElement('p');
-  aiMessage.innerHTML = "<b>AI Navigator:</b> " + aiResponse;
-  aiMessage.style.color = "#ff9800";
-  chatBox.appendChild(aiMessage);
-
-  // Scroll to bottom
-  chatBox.scrollTop = chatBox.scrollHeight;
-}
-function askAI() {
-  const input = document.getElementById('user-input');
-  const chatBox = document.getElementById('chat-box');
-  const userText = input.value.trim();
-  
-  if (userText === "") return;
-
-  // Show user message
-  const userMessage = document.createElement('p');
-  userMessage.innerHTML = "<b>You:</b> " + userText;
-  chatBox.appendChild(userMessage);
-
-  // Clear input
-  input.value = "";
-
-  // Default AI response
-  let aiResponse = "Hmm, I don't know that yet! Try asking about saving, budgeting, or investing.";
-
-  const text = userText.toLowerCase();
-
-  // Responses
+  // Keyword checks with your responses
   if (text.includes("save")) {
     aiResponse = "Saving money is great! Try to save at least 10% of your allowance.";
   } 
@@ -208,17 +173,11 @@ Step-by-Step Roadmap:
 
 If you want, I can also make a colorful visual chart showing monthly growth for 5–10 years—like a graph where you can actually “see your money climb.” It’s super motivating. Do you want me to make that graph next?`;
   }
-  else if (text.includes("quiz")) {
-    aiResponse = "Check the quiz section to practice what you've learned!";
-  }
 
   // Show AI response
   const aiMessage = document.createElement('p');
   aiMessage.innerHTML = "<b>AI Navigator:</b> " + aiResponse;
   aiMessage.style.color = "#ff9800";
   chatBox.appendChild(aiMessage);
-
-  // Scroll to bottom
   chatBox.scrollTop = chatBox.scrollHeight;
 }
-
