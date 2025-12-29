@@ -64,3 +64,24 @@ footer {
   padding: 20px;
   font-size: 14px;
 }
+#ai-navigator {
+  padding: 40px 20px;
+  border-top: 2px solid #eee;
+}
+
+#ai-navigator input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#ai-navigator button {
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#ai-navigator button:hover {
+  background-color: #45a049;
+}
