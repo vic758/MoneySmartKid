@@ -1,8 +1,8 @@
 // Quiz function
 function checkAnswer(button, correct) {
   const feedback = document.getElementById('quiz-feedback');
-
   let userAnswer;
+
   if (typeof correct === 'number') {
     userAnswer = parseInt(button.innerText.replace('$',''));
     if (userAnswer === correct) {
@@ -23,7 +23,7 @@ function checkAnswer(button, correct) {
   }
 }
 
-// Mini AI Chatbot
+// AI Chatbot
 function askAI() {
   const input = document.getElementById('user-input');
   const chatBox = document.getElementById('chat-box');
@@ -39,7 +39,7 @@ function askAI() {
   const text = userText.toLowerCase();
   let aiResponse = "Hmm, I don't know that yet! Try asking about saving, budgeting, or investing.";
 
-  // Keyword checks with your responses
+  // Your AI responses
   if (text.includes("save")) {
     aiResponse = "Saving money is great! Try to save at least 10% of your allowance.";
   } 
@@ -181,3 +181,8 @@ If you want, I can also make a colorful visual chart showing monthly growth for 
   chatBox.appendChild(aiMessage);
   chatBox.scrollTop = chatBox.scrollHeight;
 }
+
+// Press Enter to send
+document.getElementById('user-input').addEventListener('keypress', function(e){
+  if (e.key === 'Enter') askAI();
+});
