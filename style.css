@@ -14,77 +14,14 @@ header {
   padding: 40px 20px;
 }
 
-/* Navigation */
-nav {
-  background-color: #333;
-  padding: 10px 0;
-}
-
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Sections */
-section {
-  padding: 40px 20px;
-  border-bottom: 2px solid #eee;
-}
-
-section h2 {
-  color: #ff9800;
-}
-
-/* Quiz buttons */
-.quiz-question button {
-  margin: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  border: none;
-  background-color: #4caf50;
-  color: white;
-  transition: background-color 0.3s;
-}
-
-.quiz-question button:hover {
-  background-color: #45a049;
-}
-
-/* Footer */
-footer {
-  background-color: #ddd;
-  padding: 20px;
-  font-size: 14px;
-}
+/* AI Navigator Section */
 #ai-navigator {
   padding: 40px 20px;
   border-top: 2px solid #eee;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-#ai-navigator input {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#ai-navigator button {
-  border: none;
-  background-color: #4caf50;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#ai-navigator button:hover {
-  background-color: #45a049;
-}
 /* Chat Box */
 #chat-box {
   border: 1px solid #ccc;
@@ -94,6 +31,7 @@ footer {
   background: #f9f9f9;
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 /* Chat bubbles */
@@ -119,18 +57,24 @@ footer {
   text-align: left;
 }
 
+/* Chat input container for better alignment */
+#chat-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
 /* Input and button styling */
 #user-input {
-  width: 70%;
-  padding: 8px;
-  margin-top: 10px;
+  flex: 1 1 200px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
 }
 
 #ai-navigator button {
-  padding: 8px 15px;
-  margin-left: 5px;
+  padding: 10px 15px;
   border-radius: 10px;
   border: none;
   background-color: #ff9800;
@@ -142,3 +86,17 @@ footer {
   background-color: #e68900;
 }
 
+/* Make it mobile-friendly */
+@media (max-width: 600px) {
+  #chat-box p {
+    max-width: 90%;
+  }
+
+  #chat-input-container {
+    flex-direction: column;
+  }
+
+  #user-input, #ai-navigator button {
+    width: 100%;
+  }
+}
