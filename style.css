@@ -28,57 +28,59 @@ header {
   padding: 10px;
   height: 300px;
   overflow-y: auto;
-  background: #f9f9f9;
+  background: #f5f5f5;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  gap: 8px;
 }
 
 /* Chat bubbles */
 #chat-box p {
-  margin: 5px 0;
-  padding: 8px 12px;
+  margin: 0;
+  padding: 10px 15px;
   border-radius: 15px;
-  max-width: 70%;
+  max-width: 75%;
   word-wrap: break-word;
+  line-height: 1.4;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* User messages */
 #chat-box p.user-message {
-  background-color: #d1e7ff;
+  background-color: #dcf8c6;
   align-self: flex-end;
   text-align: right;
 }
 
 /* AI messages */
 #chat-box p.ai-message {
-  background-color: #fff3cd;
+  background-color: #ffffff;
   align-self: flex-start;
   text-align: left;
 }
 
-/* Chat input container for better alignment */
+/* Input container */
 #chat-input-container {
   display: flex;
-  flex-wrap: wrap;
   gap: 5px;
-  justify-content: center;
+  margin-top: 10px;
 }
 
-/* Input and button styling */
+/* Input box */
 #user-input {
-  flex: 1 1 200px;
+  flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 10px;
 }
 
+/* Send button */
 #ai-navigator button {
   padding: 10px 15px;
   border-radius: 10px;
   border: none;
   background-color: #ff9800;
-  color: #fff;
+  color: white;
   cursor: pointer;
 }
 
@@ -86,7 +88,7 @@ header {
   background-color: #e68900;
 }
 
-/* Make it mobile-friendly */
+/* Mobile-friendly */
 @media (max-width: 600px) {
   #chat-box p {
     max-width: 90%;
