@@ -175,9 +175,9 @@ Step-by-Step Roadmap:
 If you want, I can also make a colorful visual chart showing monthly growth for 5–10 years—like a graph where you can actually “see your money climb.” It’s super motivating. Do you want me to make that graph next?`;
   }
 
-  // Show AI response
+  // Show AI response in ChatGPT style
   const aiMessage = document.createElement('p');
-  aiMessage.classList.add('ai-message'); // add class for styling
+  aiMessage.classList.add('ai-message');
   aiMessage.innerHTML = "<b>AI Navigator:</b> " + aiResponse;
   chatBox.appendChild(aiMessage);
   chatBox.scrollTop = chatBox.scrollHeight;
