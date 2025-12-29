@@ -32,6 +32,7 @@ function askAI() {
 
   // Show user message
   const userMessage = document.createElement('p');
+  userMessage.classList.add('user-message'); // add class for styling
   userMessage.innerHTML = "<b>You:</b> " + userText;
   chatBox.appendChild(userMessage);
   input.value = "";
@@ -176,8 +177,8 @@ If you want, I can also make a colorful visual chart showing monthly growth for 
 
   // Show AI response
   const aiMessage = document.createElement('p');
+  aiMessage.classList.add('ai-message'); // add class for styling
   aiMessage.innerHTML = "<b>AI Navigator:</b> " + aiResponse;
-  aiMessage.style.color = "#ff9800";
   chatBox.appendChild(aiMessage);
   chatBox.scrollTop = chatBox.scrollHeight;
 }
